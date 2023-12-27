@@ -1,0 +1,1532 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cryptocurrency Prices Heatmap , Market Cap & Charts</title>
+    <link rel="stylesheet" href="css/style.css" type="text/css" />
+</head>
+
+<body>
+    <div class="content w-100 h-100vh d-flex flex-col">
+        <!-- header -->
+        <header class="header w-100">
+            <div href="#" class="top-baner position-relative">
+                <a href="#" class="d-flex">
+                    <img class="top-baner--img d-none d-xl-block" src="images/stake1-min.png" alt="stake1-min"
+                        width="100%" />
+                    <img class="top-baner--img d-xl-none" src="images/stake2-min.png" alt="stake2-min" width="100%" />
+                </a>
+                <span class="close-icon top-baner--close-icon"></span>
+            </div>
+            <!-- header-navbar -->
+            <nav class="header-navbar w-100 d-flex justify-content-between align-items-center gap-10">
+                <!-- The burger menu icon -->
+                <button class="burger-menu-icon-btn d-none align-self-stretch d-xl-flex justify-content-center align-items-center  cursor-pointer px-10">
+                    <img class="burger-menu-icon" src="images/icon-burger.svg" alt="icon-burger">
+                </button>
+                <!-- The logo website -->
+                <a href="#" class="logo-link px-10 py-5">
+                    <img class="logo" src="images/logo.svg" alt="logo" width="110" height="25" />
+                </a>
+                <!-- Content on the left side of the navbar -->
+                <div class="header-navbar--left-side align-self-stretch d-flex ">
+                    <div class="header-responsive-menu-top-baner d-none d-xl-block position-relative">
+                        <img class="header-responsive-menu-logo" src="images/logo.svg" alt="logo" width="180px" />
+                        <div class="header-responsive-menu-close-icon close-icon rounded-sm"></div>
+                    </div>
+                    <ul class="header-menu d-flex justify-content-center">
+                        <li class="header-menu--item position-relative px-10 d-flex justify-content-center align-items-center">
+                            <a href="#" class="header-menu--link position-relative arrow-icon-xl">Coins</a>
+                            <ul class="header-menu--inner-menu d-none position-absolute rounded-m">
+                                <li class="header-menu--inner-menu--item rounded-m">
+                                    <a href="#" class="header-menu--inner-menu--link d-block py-10 px-15">Heatmap</a>
+                                </li>
+                                <li class="header-menu--inner-menu--item rounded-m">
+                                    <a href="#" class="header-menu--inner-menu--link d-block py-10 px-15">By Volume</a>
+                                </li>
+                                <li class="header-menu--inner-menu--item rounded-m">
+                                    <a href="#" class="header-menu--inner-menu--link d-block py-10 px-15">Top 50
+                                        Gainers</a>
+                                </li>
+                                <li class="header-menu--inner-menu--item rounded-m">
+                                    <a href="#" class="header-menu--inner-menu--link d-block py-10 px-15">Top 50
+                                        losers</a>
+                                </li>
+                                <li class="header-menu--inner-menu--item rounded-m">
+                                    <a href="#" class="header-menu--inner-menu--link d-block py-10 px-15">Market
+                                        Analytics</a>
+                                </li>
+                                <li class="header-menu--inner-menu--item rounded-m">
+                                    <a href="#" class="header-menu--inner-menu--link d-block py-10 px-15">Coin
+                                        directory</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="header-menu--item position-relative px-10 d-flex justify-content-center align-items-center">
+                            <a href="#" class="header-menu--link position-relative arrow-icon-xl">
+                                NFT
+                            </a>
+                            <ul class="header-menu--inner-menu d-none position-absolute rounded-m">
+                                <li class="header-menu--inner-menu--item rounded-m">
+                                    <a href="#" class="header-menu--inner-menu--link d-block py-10 px-15">Heatmap</a>
+                                </li>
+                                <li class="header-menu--inner-menu--item rounded-m">
+                                    <a href="#" class="header-menu--inner-menu--link d-block py-10 px-15">NFT
+                                        directory</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="header-menu--item position-relative px-10 d-flex justify-content-center align-items-center">
+                            <a href="#" class="header-menu--link position-relative arrow-icon-xl">
+                                Exchange
+                            </a>
+                            <ul class="header-menu--inner-menu d-none position-absolute rounded-m">
+                                <li class="header-menu--inner-menu--item rounded-m">
+                                    <a href="#" class="header-menu--inner-menu--link d-block py-10 px-15">Heatmap</a>
+                                </li>
+                                <li class="header-menu--inner-menu--item rounded-m">
+                                    <a href="#" class="header-menu--inner-menu--link d-block py-10 px-15">Exchange
+                                        directory</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="header-menu--item position-relative px-10 d-flex justify-content-center align-items-center">
+                            <a href="#" class="header-menu--link position-relative arrow-icon-xl">
+                                News
+                            </a>
+                            <ul class="header-menu--inner-menu d-none position-absolute rounded-m">
+                                <li class="header-menu--inner-menu--item rounded-m">
+                                    <a href="#" class="header-menu--inner-menu--link d-block py-10 px-15">News 360</a>
+                                </li>
+                                <li class="header-menu--inner-menu--item rounded-m">
+                                    <a href="#" class="header-menu--inner-menu--link d-block py-10 px-15">Newsletter
+                                        360</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="header-menu--item position-relative px-10 d-flex justify-content-center align-items-center">
+                            <a href="#" class="header-menu--link position-relative arrow-icon-xl">
+                                About
+                            </a>
+                            <ul class="header-menu--inner-menu d-none position-absolute rounded-m">
+                                <li class="header-menu--inner-menu--item rounded-m">
+                                    <a href="#" class="header-menu--inner-menu--link d-block py-10 px-15">Crypto
+                                        Glossary</a>
+                                </li>
+                                <li class="header-menu--inner-menu--item rounded-m">
+                                    <a href="#" class="header-menu--inner-menu--link d-block py-10 px-15">FAQ</a>
+                                </li>
+                                <li class="header-menu--inner-menu--item rounded-m">
+                                    <a href="#" class="header-menu--inner-menu--link d-block py-10 px-15">About
+                                        Coin360</a>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                    <ul
+                        class="header-social-networks-menu d-none d-xl-flex justify-content-center align-items-center py-10 gap-5">
+                        <li class="header-social-networks-menu--item">
+                            <a href="#" class="header-social-networks-menu--link d-block">
+                                <img src="images/icon-telegram.svg" alt="icon-telegram" />
+                            </a>
+                        </li>
+                        <li class="header-social-networks-menu--item">
+                            <a href="#" class="header-social-networks-menu--link d-block">
+                                <img src="images/icon-twitter.svg" alt="icon-twitter" />
+                            </a>
+                        </li>
+                        <li class="header-social-networks-menu--item">
+                            <a href="#" class="header-social-networks-menu--link d-block">
+                                <img src="images/icon-mail.svg" alt="icon-mail" />
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <!-- The link of header navbar -->
+                <div class="stake-link-wrapper mr-auto align-self-stretch position-relative d-md-none">
+                    <a href="#"
+                        class="stake-link w-100 overflow-hidden position-absolute d-flex flex-col align-items-center gap-5">
+                        <img class="stake-img" src="images/stake.com white.svg" alt="stake.com white" width="40"
+                            height="20">
+                        <span class="stake-text px-10 py-10 text-center">200% bounds on stake.com</span>
+                    </a>
+                </div>
+                <!-- Content on the right side of the navbar -->
+                <div class="header-navbar--right-side align-self-stretch d-flex justify-content-center gap-3 px-10 py-5">
+                    <div class="search-form-wrapper d-xl-none d-flex align-items-stretch position-relative">
+                        <form class="search-form d-flex align-items-stretch gap-3 px-10 rounded-sm">
+                            <div class="search-icon d-flex align-items-center">
+                                <svg width="14" height="14" viewBox="0 0 18 18" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M12.5 11H11.71L11.43 10.73C12.41 9.59 13 8.11 13 6.5C13 2.91 10.09 0 6.5 0C2.91 0 0 2.91 0 6.5C0 10.09 2.91 13 6.5 13C8.11 13 9.59 12.41 10.73 11.43L11 11.71V12.5L16 17.49L17.49 16L12.5 11ZM6.5 11C4.01 11 2 8.99 2 6.5C2 4.01 4.01 2 6.5 2C8.99 2 11 4.01 11 6.5C11 8.99 8.99 11 6.5 11Z"
+                                        fill="white" fill-opacity="0.4" />
+                                </svg>
+                            </div>
+                            <input type="search" placeholder="Search..." class="search-input" />
+                            <button type="reset" class="search-form--reset-btn close-icon rounded-circle"></button>
+                        </form>
+                        <div class="searched-results-list-wrapper position-absolute" >
+                            <!-- searched results list items -->
+                        </div>
+                    </div>
+                    <button class="responsive-search-btn d-none d-xl-block px-10 cursor-pointer">
+                        <img class="responsive-search-icon" src="images/icon-search.svg" alt="search-icon">
+                    </button>
+                    <button class="responsive-filter-btn d-none d-xl-block d-md-none px-10 cursor-pointer">
+                        <img class="responsive-filter-icon" src="images/icon-filter.svg" alt="icon-filter" width="20" />
+                    </button>
+                    <button class="responsive-table-btn d-none d-xl-block d-md-none px-10 cursor-pointer">
+                        <img class="responsive-table-icon" src="images/icon-table.svg" alt="icon-table" width="18px"
+                            height="18px" />
+                    </button>
+                    <button
+                        class="crypto-price-unit-btn cursor-pointer d-flex justify-content-center align-items-center rounded-sm py-5 d-xl-none">
+                        <img src="images/icon-world.svg" alt="icon-world" />
+                        <span>USD</span>
+                    </button>
+                    <div class="crypto-units-popup-wrapper w-100 h-100vh overflow-auto d-none flex-col align-items-center d-xl-none">
+                        <div class="crypto-units-popup rounded-m d-flex flex-col">
+                            <h2 class="crypto-units-popup--title fw-bold">Language and Currency Preferences</h2>
+                            <p class="text-capitalize">currency</p>
+                            <ul class="crypto-units-menu d-flex flex-wrap gap-8">
+                                <li class="crypto-units-menu--item rounded-sm cursor-pointer d-flex gap-8">
+                                    <img class="crypto-unit-icon" src="images/USD-filter-basecurrency.svg"
+                                        alt="USD-filter-basecurrency" width="32" height="32" />
+                                    <div class="crypto-unit-info d-flex flex-col gap-5">
+                                        <span class="crypto-unit-name">United States dollar</span>
+                                        <span class="crypto-unit-abbr-name">USD</span>
+                                    </div>
+                                </li>
+                                <li class="crypto-units-menu--item rounded-sm cursor-pointer d-flex gap-8">
+                                    <img class="crypto-unit-icon" src="images/EUR-filter-basecurrency.svg"
+                                        alt="EUR-filter-basecurrency" width="32" height="32" />
+                                    <div class="crypto-unit-info d-flex flex-col gap-5">
+                                        <span class="crypto-unit-name">Euro</span>
+                                        <span class="crypto-unit-abbr-name">EUR</span>
+                                    </div>
+                                </li>
+                                <li class="crypto-units-menu--item rounded-sm cursor-pointer d-flex gap-8">
+                                    <img class="crypto-unit-icon" src="images/GBP-filter-basecurrency.svg"
+                                        alt="GBP-filter-basecurrency" width="32" height="32" />
+                                    <div class="crypto-unit-info d-flex flex-col gap-5">
+                                        <span class="crypto-unit-name">British Pound Sterling</span>
+                                        <span class="crypto-unit-abbr-name">GBP</span>
+                                    </div>
+                                </li>
+                                <li class="crypto-units-menu--item rounded-sm cursor-pointer d-flex gap-8">
+                                    <img class="crypto-unit-icon" src="images/CNY-filter-basecurrency.svg"
+                                        alt="CNY-filter-basecurrency" width="32" height="32" />
+                                    <div class="crypto-unit-info d-flex flex-col gap-5">
+                                        <span class="crypto-unit-name">Chinese Yuan</span>
+                                        <span class="crypto-unit-abbr-name">CNY</span>
+                                    </div>
+                                </li>
+                                <li class="crypto-units-menu--item rounded-sm cursor-pointer d-flex gap-8">
+                                    <img class="crypto-unit-icon" src="images/JPY-filter-basecurrency.svg"
+                                        alt="JPY-filter-basecurrency" width="32" height="32" />
+                                    <div class="crypto-unit-info d-flex flex-col gap-5">
+                                        <span class="crypto-unit-name">Japanese Yen</span>
+                                        <span class="crypto-unit-abbr-name">JPY</span>
+                                    </div>
+                                </li>
+                                <li class="crypto-units-menu--item rounded-sm cursor-pointer d-flex gap-8">
+                                    <img class="crypto-unit-icon" src="images/CAD-filter-basecurrency.svg"
+                                        alt="CAD-filter-basecurrency" width="32" height="32" />
+                                    <div class="crypto-unit-info d-flex flex-col gap-5">
+                                        <span class="crypto-unit-name">Canadian Dollar</span>
+                                        <span class="crypto-unit-abbr-name">CAD</span>
+                                    </div>
+                                </li>
+                                <li class="crypto-units-menu--item rounded-sm cursor-pointer d-flex gap-8">
+                                    <img class="crypto-unit-icon" src="images/BRL-filter-basecurrency.svg"
+                                        alt="BRL-filter-basecurrency" width="32" height="32" />
+                                    <div class="crypto-unit-info d-flex flex-col gap-5">
+                                        <span class="crypto-unit-name">Brazillian Real</span>
+                                        <span class="crypto-unit-abbr-name">BRL</span>
+                                    </div>
+                                </li>
+                                <li class="crypto-units-menu--item rounded-sm cursor-pointer d-flex gap-8">
+                                    <img class="crypto-unit-icon" src="images/TRY-filter-basecurrency.svg"
+                                        alt="TRY-filter-basecurrency" width="32" height="32" />
+                                    <div class="crypto-unit-info d-flex flex-col gap-5">
+                                        <span class="crypto-unit-name">Turkish Lira</span>
+                                        <span class="crypto-unit-abbr-name">TRY</span>
+                                    </div>
+                                </li>
+                                <li class="crypto-units-menu--item rounded-sm cursor-pointer d-flex gap-8">
+                                    <img class="crypto-unit-icon" src="images/RUB-filter-basecurrency.svg"
+                                        alt="RUB-filter-basecurrency" width="32" height="32" />
+                                    <div class="crypto-unit-info d-flex flex-col gap-5">
+                                        <span class="crypto-unit-name">Russian Ruble</span>
+                                        <span class="crypto-unit-abbr-name">RUB</span>
+                                    </div>
+                                </li>
+                                <li class="crypto-units-menu--item rounded-sm cursor-pointer d-flex gap-8">
+                                    <img class="crypto-unit-icon" src="images/IRR-filter-basecurrency.svg"
+                                        alt="IRR-filter-basecurrency" width="32" height="32" />
+                                    <div class="crypto-unit-info d-flex flex-col gap-5">
+                                        <span class="crypto-unit-name">Iranian Rial</span>
+                                        <span class="crypto-unit-abbr-name">IRR</span>
+                                    </div>
+                                </li>
+                                <li class="crypto-units-menu--item rounded-sm cursor-pointer d-flex gap-8">
+                                    <img class="crypto-unit-icon" src="images/UAH-filter-basecurrency.svg"
+                                        alt="UAH-filter-basecurrency" width="32" height="32" />
+                                    <div class="crypto-unit-info d-flex flex-col gap-5">
+                                        <span class="crypto-unit-name">UKrainian Hryvnia</span>
+                                        <span class="crypto-unit-abbr-name">UAH</span>
+                                    </div>
+                                </li>
+                                <li class="crypto-units-menu--item rounded-sm cursor-pointer d-flex gap-8">
+                                    <img class="crypto-unit-icon" src="images/INR-filter-basecurrency.svg"
+                                        alt="INR-filter-basecurrency" width="32" height="32" />
+                                    <div class="crypto-unit-info d-flex flex-col gap-5">
+                                        <span class="crypto-unit-name">Indian Rupee</span>
+                                        <span class="crypto-unit-abbr-name">INR</span>
+                                    </div>
+                                </li>
+                                <li class="crypto-units-menu--item rounded-sm cursor-pointer d-flex gap-8">
+                                    <img class="crypto-unit-icon" src="images/SGD-filter-basecurrency.svg"
+                                        alt="SGD-filter-basecurrency" width="32" height="32" />
+                                    <div class="crypto-unit-info d-flex flex-col gap-5">
+                                        <span class="crypto-unit-name">Singapore Dollar</span>
+                                        <span class="crypto-unit-abbr-name">SGD</span>
+                                    </div>
+                                </li>
+                                <li class="crypto-units-menu--item rounded-sm cursor-pointer d-flex gap-8">
+                                    <img class="crypto-unit-icon" src="images/HKD-filter-basecurrency.svg"
+                                        alt="HKD-filter-basecurrency" width="32" height="32" />
+                                    <div class="crypto-unit-info d-flex flex-col gap-5">
+                                        <span class="crypto-unit-name">Hong Kong Dollar</span>
+                                        <span class="crypto-unit-abbr-name">HKD</span>
+                                    </div>
+                                </li>
+                                <li class="crypto-units-menu--item rounded-sm cursor-pointer d-flex gap-8">
+                                    <img class="crypto-unit-icon" src="images/KZT-filter-basecurrency.svg"
+                                        alt="KZT-filter-basecurrency" width="32" height="32" />
+                                    <div class="crypto-unit-info d-flex flex-col gap-5">
+                                        <span class="crypto-unit-name">Kazakhatani Tenge</span>
+                                        <span class="crypto-unit-abbr-name">KZT</span>
+                                    </div>
+                                </li>
+                            </ul>
+                            <ul class="crypto-units-menu d-flex flex-wrap gap-8">
+                                <li class="crypto-units-menu--item rounded-sm cursor-pointer d-flex gap-8 active">
+                                    <img class="crypto-unit-icon" src="images/USDT-filter-basecurrency.svg"
+                                        alt="USDT-filter-basecurrency" width="32" height="32" />
+                                    <div class="crypto-unit-info d-flex flex-col gap-5">
+                                        <span class="crypto-unit-name">Tether</span>
+                                        <span class="crypto-unit-abbr-name">USDT</span>
+                                    </div>
+                                </li>
+                                <li class="crypto-units-menu--item rounded-sm cursor-pointer d-flex gap-8">
+                                    <img class="crypto-unit-icon" src="images/BTC-filter-basecurrency.svg"
+                                        alt="BTC-filter-basecurrency" width="32" height="32" />
+                                    <div class="crypto-unit-info d-flex flex-col gap-5">
+                                        <span class="crypto-unit-name">Bitcoin</span>
+                                        <span class="crypto-unit-abbr-name">BTC</span>
+                                    </div>
+                                </li>
+                                <li class="crypto-units-menu--item rounded-sm cursor-pointer d-flex gap-8">
+                                    <img class="crypto-unit-icon" src="images/ETH-filter-basecurrency.svg"
+                                        alt="ETH-filter-basecurrency" width="32" height="32" />
+                                    <div class="crypto-unit-info d-flex flex-col gap-5">
+                                        <span class="crypto-unit-name">Ethereum</span>
+                                        <span class="crypto-unit-abbr-name">ETH</span>
+                                    </div>
+                                </li>
+                                <li class="crypto-units-menu--item rounded-sm cursor-pointer d-flex gap-8">
+                                    <img class="crypto-unit-icon" src="images/EOS-filter-basecurrency.svg"
+                                        alt="EOS-filter-basecurrency" width="32" height="32" />
+                                    <div class="crypto-unit-info d-flex flex-col gap-5">
+                                        <span class="crypto-unit-name">EOS</span>
+                                        <span class="crypto-unit-abbr-name">EOS</span>
+                                    </div>
+                                </li>
+                            </ul>
+                            <div class="crypto-price-units-popup--btns d-flex gap-8">
+                                <button
+                                    class="crypto-price-units-popup--btn crypto-price-units-popup--cancel-btn px-10 py-10 text-center cursor-pointer rounded-sm">Cancel</button>
+                                <button
+                                    class="crypto-price-units-popup--btn crypto-price-units-popup--save-btn px-10 py-10 text-center cursor-pointer rounded-sm">Save
+                                    preference</button>
+                            </div>
+                        </div>
+                    </div>
+                    <a href="#"
+                        class="watchList-link d-xl-none d-flex align-items-center justify-content-center rounded-sm py-5">
+                        <img class="watchList-link--icon" src="images/icon-star-green.svg" alt="icon-star-green" />
+                        <span class="watchList-link--text">Watchlist</span>
+                    </a>
+                </div>
+            </nav>
+        </header>
+        <div class="main-footer-container f-grow-1 d-flex justify-content-between gap-3 position-relative">
+            <!-- main -->
+            <main class="main f-grow-1  overflow-hidden py-5">
+                <!-- main navbar -->
+                <nav class="main-navbar d-flex justify-content-between align-items-stretch position-relative">
+                    <!-- The filter menu -->
+                    <ul class="filter-menu h-100 position-absolute d-flex cursor-pointer">
+                        <li class="filter-menu--item rounded-sm cursor-pointer text-nowrap position-relative">
+                                <span class="filter-menu--item-content h-100 px-10 d-flex align-items-center justify-content-center gap-5 arrow-icon">
+                                    <span class="filter-menu--item-title">show: </span>
+                                    <span class="filter-menu--item-value" data-default-value="Top 100">Top 100</span>
+                                </span>
+                                <ul class="filter-menu--inner-menu d-none position-absolute rounded-xsm">
+                                    <li class="filter-menu--inner-menu--item text-nowrap">All</li>
+                                    <li class="filter-menu--inner-menu--item text-nowrap selected">Top 100</li>
+                                </ul>
+                        </li>
+                        <li class="filter-menu--item rounded-sm cursor-pointer text-nowrap position-relative">
+                                <span class="filter-menu--item-content h-100 px-10 d-flex align-items-center justify-content-center gap-5 arrow-icon">
+                                    <span class="filter-menu--item-title">Type: </span>
+                                    <span class="filter-menu--item-value" data-default-value="Coins and tokens">Coins and tokens</span>
+                                </span>
+                                <ul class="filter-menu--inner-menu d-none position-absolute rounded-xsm">
+                                    <li class="filter-menu--inner-menu--item text-nowrap selected">Coins and tokens</li>
+                                    <li class="filter-menu--inner-menu--item text-nowrap">Coins</li>
+                                    <li class="filter-menu--inner-menu--item text-nowrap">Tokens</li>
+                                </ul>
+                        </li>
+                        <li class="filter-menu--item rounded-sm cursor-pointer text-nowrap position-relative">
+                            <span class="filter-menu--item-content h-100 px-10 d-flex align-items-center justify-content-center gap-5 arrow-icon">
+                                <span class="filter-menu--item-title">Performance: </span>
+                                <span class="filter-menu--item-value" data-default-value="1 day">1 day</span> 
+                            </span>
+                            <div class="performance-detail d-none position-absolute rounded-xsm">
+                                <ul class="performance-menu rounded-xsm">
+                                    <li class="performance-menu--item text-nowrap">1 hour</li>
+                                    <li class="performance-menu--item text-nowrap selected">1 day</li>
+                                    <li class="performance-menu--item text-nowrap">7 days</li>
+                                    <li class="performance-menu--item text-nowrap">1 month</li>
+                                    <li class="performance-menu--item text-nowrap">select custom date...</li>
+                                </ul>
+                                <div class="custom-date d-none rounded-xsm">
+                                    <h3 class="custom-date--title fw-normal">Select custom date range</h3>
+                                    <form class="custom-date--form d-flex flex-col">
+                                        <div class="custom-date--inputs-wrapper d-flex gap-10 align-items-center">
+                                            From 
+                                            <input type="text" class="date-start-input rounded-xsm px-5 py-5" value="04.08.2023" />
+                                            To
+                                            <input type="text" class="date-end-input rounded-xsm px-5 py-5" value="05.08.2023"/>
+                                        </div>
+                                        <div class="custom-date--form--btns d-flex gap-10">
+                                            <button type="button" class="custom-date--form--clear-btn cursor-pointer rounded-xsm">Clear</button>
+                                            <button type="submit" class="custom-date--form--apply-btn cursor-pointer rounded-xsm">Apply changes</button>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="filter-menu--item rounded-sm cursor-pointer text-nowrap position-relative">
+                                <span class="filter-menu--item-content h-100 px-10 d-flex align-items-center justify-content-center gap-5 arrow-icon">
+                                    <span class="filter-menu--item-title">Gainers & Losers: </span>
+                                    <span class="filter-menu--item-value" data-default-value="All">All</span>
+                                </span>
+                                <ul class="filter-menu--inner-menu d-none position-absolute roounded-xsm">
+                                    <li class="filter-menu--inner-menu--item text-nowrap selected">All</li>
+                                    <li class="filter-menu--inner-menu--item text-nowrap">50 losers</li>
+                                    <li class="filter-menu--inner-menu--item text-nowrap">100 losers</li>
+                                    <li class="filter-menu--inner-menu--item text-nowrap">200 losers</li>
+                                    <li class="filter-menu--inner-menu--item text-nowrap">50 gainers</li>
+                                    <li class="filter-menu--inner-menu--item text-nowrap">100 gainers</li>
+                                    <li class="filter-menu--inner-menu--item text-nowrap">200 gainers</li>
+                                </ul>
+                        </li>
+                        <li class="filter-menu--item rounded-sm cursor-pointer text-nowrap position-relative">
+                                <span class="filter-menu--item-content h-100 px-10 d-flex align-items-center justify-content-center gap-5 arrow-icon">
+                                    <span class="filter-menu--item-title">Block Size: </span>
+                                    <span class="filter-menu--item-value" data-default-value="Market Cap">Market Cap</span>
+                                </span>
+                                <ul class="filter-menu--inner-menu d-none position-absolute rounded-xsm">
+                                    <li class="filter-menu--inner-menu--item text-nowrap selected">Market Cap</li>
+                                    <li class="filter-menu--inner-menu--item text-nowrap">Volume</li>
+                                </ul>
+                        </li>
+                        <li class="filter-menu--item rounded-sm cursor-pointer text-nowrap position-relative">
+                                <span class="filter-menu--item-content h-100 px-10 d-flex align-items-center justify-content-center gap-5 arrow-icon">
+                                    <span class="filter-menu--item-title">M.cap range</span>
+                                </span>
+                                <div class="currency-range position-absolute ">
+                                    <div class="currency-range--value">
+                                      <div class="display-currency-range">
+                                        from
+                                        <span class="start-selected-currency-range" id="start-range">0$</span>
+                                        to
+                                        <span class="end-selected-currency-range" id="end-range">552.0b</span>
+                                      </div>
+                                      <div class="btns-wrapper">
+                                        <button class="reset-btn">Reset</button>
+                                        <button class="apply-btn">Apply</button>
+                                      </div>
+                                    </div>
+                                    <div class="currency-range--slider-wrapper">
+                                      <div class="currency-range--slider">
+                                        <span class="currency-range--slider--dot currency-range--slider--dot1" data-breakPoints="0"></span>
+                                        <span class="currency-range--slider--dot currency-range--slider--dot2" data-breakPoints="100"></span>
+                                        <span class="currency-range--slider--dot currency-range--slider--dot3" data-breakPoints="10000"></span>
+                                        <span class="currency-range--slider--dot currency-range--slider--dot4" data-breakPoints="1000000"></span>
+                                        <span class="currency-range--slider--dot currency-range--slider--dot5" data-breakPoints="1000000000"></span>
+                                        <span class="currency-range--slider--dot currency-range--slider--dot6" data-breakPoints="552000000000"></span>
+                                        <span class="currency-range--slider--selected-range" style="width:100%"></span>
+                                      </div>
+                                    </div>
+                                </div>
+                        </li>
+                        <li class="filter-menu--item rounded-sm cursor-pointer text-nowrap position-relative">
+                            <span class="filter-menu--item-content h-100 px-10 d-flex align-items-center justify-content-center gap-5 arrow-icon">
+                                <span class="filter-menu--item-title">Hide</span>
+                                <span class="number-selected-shownCurrencies"></span>
+                            </span>
+                            <div class="hide-shownCurrencies d-none position-absolute rounded-xsm flex-col">
+                                <div class="hide-shownCurrencies--search-wrapper d-flex">
+                                    <input type="search" class="hide-shownCurrencies--search-input f-grow-1 py-10" placeholder="Search"/>
+                                    <button type="button" class="hide-shownCurrencies--reset-btn px-10  fw-bolder">Reset</button>
+                                </div>
+                                <!-- the list of selected items by user from shown currencies list -->
+                                <ul class="hide-shownCurrencies--list-selected-items overflow-auto d-flex flex-wrap gap-5 px-10 ">
+                                    
+                                </ul>
+                                <!-- the list of shown currencies in main--origin-content section  -->
+                                <ul class="shownCurrencies-list d-flex flex-wrap  overflow-auto py-15"></ul>
+                            </div>
+                        </li>
+                        <li class="filter-menu--reset-btn d-flex align-items-center cursor-pointer text-nowrap">Reset</li>
+                    </ul>
+                    <!-- filter button -->
+                    <button class="filter-btn position-relative cursor-pointer" data-title="Hide filter"></button>
+                    <!-- Content on the right side of the main navbar   -->
+                    <div class="other-features-website position-relative d-flex flex-row-reverse">
+                        <button class="share-map-btn cursor-pointer rounded-sm d-flex justify-content-center align-items-center gap-5">
+                            <img src="images/icon-share.svg" alt="icon-share" width="16" height="16" />
+                            <span>Share Map</span>
+                        </button>
+                        <div class="select-cryptoCurrency-style rounded-sm d-flex justify-content-center align-items-center gap-5">
+                            <button class="rectangle-style-cryptoCurrency-btn active cursor-pointer d-flex align-items-end px-5 py-5">
+                                <svg width="16" height="16" viewBox="0 0 16 16" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path fill-rule="evenodd" clip-rule="evenodd"
+                                        d="M0 0H10V16H0V0ZM16 0H12V10H16V0ZM16 12H12V16H16V12Z" fill="#aaa" />
+                                </svg>
+                            </button>
+                            <button class="table-style-cryptoCurrency-btn cursor-pointer d-flex align-items-end px-5 py-5">
+                                <svg width="16" height="16" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16">
+                                    <g>
+                                        <rect width="4" height="4" style="fill:#aaa"/>
+                                        <rect x="6" width="10" height="4" style="fill:#aaa"/>
+                                        <rect y="6" width="4" height="4" style="fill:#aaa"/>
+                                        <rect x="6" y="6" width="10" height="4" style="fill:#aaa"/>
+                                        <rect y="12" width="4" height="4" style="fill:#aaa"/>
+                                        <rect x="6" y="12" width="10" height="4" style="fill:#aaa"/>
+                                    </g>
+                                </svg>
+                            </button>
+                        </div>
+                        <button class="highLight-cryptoCurrency-value-btn cursor-pointer rounded-sm d-flex justify-content-center align-items-center">
+                            <svg width="18" height="19" viewBox="0 0 18 19" fill="none" xmlns="http://www.w3.org/2000/svg" role="img">
+                                <path d="M17.465 6.281H12.11a.537.537 0 0 1-.527-.639L12.274.64c.076-.53-.541-.858-.917-.468L.163 11.768c-.346.358-.105.95.376.95H5.88c.331 0 .587.297.527.64l-.692 5.003c-.075.53.542.858.918.468L17.826 7.232c.361-.343.12-.95-.36-.95Z" fill="#fff" fill-opacity="0.4"></path>
+                            </svg>
+                        </button>
+                    </div>
+                </nav>
+                <!-- the main content of webpage -->
+                <section class="main--origin-content overflow-hidden">
+                    <div class="cryptoCurrencies">
+                        <div class="cryptoCurrencies--col1">
+                            <a href="#"class="cryptoCurrency-link mid-profit">
+                                <div class="cryptoCurrency">
+                                    <h3 class="cryptoCurrency-title" style="font-size : 60px;">BTC</h3>
+                                    <span class="cryptoCurrency-USDT" style="font-size : 16px;">25,779.72 USDT</span>
+                                    <span class="cryptoCurrency-percent" style="font-size : 14px;">+8.74%</span>
+                                    <span class="cryptoCurrency-dominance">Dominance: 47.59%</span>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="cryptoCurrencies--col2">
+                            <div class="cryptoCurrencies--col2--col1">
+                                <a href="#" class="cryptoCurrency-link low-profit">
+                                    <div class="cryptoCurrency">
+                                        <h3 class="cryptoCurrency-title"  style="font-size : 28px;">ETH</h3>
+                                        <span class="cryptoCurrency-USDT" style="font-size : 13px;">1,546.73 USDT</span>
+                                        <span class="cryptoCurrency-percent" style="font-size : 11px;">+1.6%</span>
+                                    </div>
+                                </a>
+                                <a href="#" class="cryptoCurrency-link low-profit">
+                                    <div class="cryptoCurrency">
+                                        <h3 class="cryptoCurrency-title"  style="font-size : 18px;">BNB</h3>
+                                        <span class="cryptoCurrency-USDT" style="font-size : 9px;">206.046 USDT</span>
+                                        <span class="cryptoCurrency-percent" style="font-size : 7px;">+0.42%</span>
+                                    </div>
+                                </a>
+                                <a href="#" class="cryptoCurrency-link low-loss">
+                                    <div class="cryptoCurrency">
+                                        <h3 class="cryptoCurrency-title" style="font-size : 18px;">XRP</h3>
+                                        <span class="cryptoCurrency-USDT" style="font-size : 9px;">0.479083 USDT</span>
+                                        <span class="cryptoCurrency-percent" style="font-size : 7px;">-1.63%</span>
+                                    </div>
+                                </a>
+                                <a href="#" class="cryptoCurrency-link mid-profit">
+                                    <div class="cryptoCurrency">
+                                        <h3 class="cryptoCurrency-title" style="font-size : 18px;">SOL</h3>
+                                        <span class="cryptoCurrency-USDT" style="font-size : 9px;">21.3794 USDT</span>
+                                        <span class="cryptoCurrency-percent" style="font-size : 7px;">+5.69%</span>
+                                    </div>
+                                </a>
+                                 <a href="#" class="cryptoCurrency-link low-profit">
+                                    <div class="cryptoCurrency">
+                                        <h3 class="cryptoCurrency-title" style="font-size : 18px;">ADA</h3>
+                                        <span class="cryptoCurrency-USDT" style="font-size : 9px;">0.24564 USDT</span>
+                                        <span class="cryptoCurrency-percent" style="font-size : 7px;">-1.15%</span>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="cryptoCurrencies--col2--col2">
+                                <div class="cryptoCurrencies--col2--col2--row1">
+                                    <a href="#" class="cryptoCurrency-link low-profit">
+                                        <div class="cryptoCurrency">
+                                            <h3 class="cryptoCurrency-title">DOGE</h3>
+                                            <span class="cryptoCurrency-USDT">0.057874 USDT</span>
+                                            <span class="cryptoCurrency-percent">+1.21%</span>
+                                        </div>
+                                    </a>
+                                    <a href="#" class="cryptoCurrency-link low-profit">
+                                        <div class="cryptoCurrency">
+                                            <h3 class="cryptoCurrency-title">TRX</h3>
+                                            <span class="cryptoCurrency-USDT">0.084964 USDT</span>
+                                            <span class="cryptoCurrency-percent">+1.77%</span>
+                                        </div>
+                                    </a>
+                                    <a href="#" class="cryptoCurrency-link low-profit">
+                                        <div class="cryptoCurrency">
+                                            <h3 class="cryptoCurrency-title">DOT</h3>
+                                            <span class="cryptoCurrency-USDT">3.658734 USDT</span>
+                                            <span class="cryptoCurrency-percent">+2.73%</span>
+                                        </div>
+                                    </a>
+                                    <a href="#" class="cryptoCurrency-link low-profit">
+                                        <div class="cryptoCurrency">
+                                            <h3 class="cryptoCurrency-title">LTC</h3>
+                                            <span class="cryptoCurrency-USDT">61.1171 USDT</span>
+                                            <span class="cryptoCurrency-percent">-1.6%</span>
+                                        </div>
+                                    </a>
+                                    <a href="#" class="cryptoCurrency-link low-profit">
+                                        <div class="cryptoCurrency">
+                                            <h3 class="cryptoCurrency-title">WBTC</h3>
+                                            <span class="cryptoCurrency-USDT">26,672.36 USDT</span>
+                                            <span class="cryptoCurrency-percent">+1.52%</span>
+                                        </div>
+                                    </a>
+                                    <a href="#" class="cryptoCurrency-link low-profit">
+                                        <div class="cryptoCurrency">
+                                            <h3 class="cryptoCurrency-title">TON</h3>
+                                            <span class="cryptoCurrency-USDT">1.982807 USDT</span>
+                                            <span class="cryptoCurrency-percent">-2.04%</span>
+                                        </div>
+                                    </a>
+                                    <a href="#" class="cryptoCurrency-link low-profit">
+                                        <div class="cryptoCurrency">
+                                            <h3 class="cryptoCurrency-title">MATIC</h3>
+                                            <span class="cryptoCurrency-USDT">0.510395 USDT</span>
+                                            <span class="cryptoCurrency-percent">-1.18%</span>
+                                        </div>
+                                    </a>
+                                    <a href="#" class="cryptoCurrency-link high-profit">
+                                        <div class="cryptoCurrency">
+                                            <h3 class="cryptoCurrency-title">BCH</h3>
+                                            <span class="cryptoCurrency-USDT">211.669 USDT</span>
+                                            <span class="cryptoCurrency-percent">-0.67%</span>
+                                        </div>
+                                    </a>
+                                    <a href="#" class="cryptoCurrency-link low-profit">
+                                        <div class="cryptoCurrency">
+                                            <h3 class="cryptoCurrency-title">SHIB</h3>
+                                            <span class="cryptoCurrency-USDT">0.000007 USDT</span>
+                                            <span class="cryptoCurrency-percent">+0.6%</span>
+                                        </div>
+                                    </a>
+                                    <a href="#" class="cryptoCurrency-link low-profit">
+                                        <div class="cryptoCurrency">
+                                            <h3 class="cryptoCurrency-title">LINK</h3>
+                                            <span class="cryptoCurrency-USDT">7.195461 USDT</span>
+                                            <span class="cryptoCurrency-percent">-2.13%</span>
+                                        </div>
+                                    </a>
+                                </div>
+                                <div class="cryptoCurrencies--col2--col2--row2">
+                                    <div class="cryptoCurrencies--col2--col2--row2--col1">
+                                        <a href="#" class="cryptoCurrency-link low-loss">
+                                            <div class="cryptoCurrency">
+                                                <h3 class="cryptoCurrency-title">LEO</h3>
+                                                <span class="cryptoCurrency-USDT">3.724856 USDT</span>
+                                                <span class="cryptoCurrency-percent">-0.14%</span>
+                                            </div>
+                                        </a>
+                                        <a href="#" class="cryptoCurrency-link low-profit">
+                                            <div class="cryptoCurrency">
+                                                <h3 class="cryptoCurrency-title">XLM</h3>
+                                                <span class="cryptoCurrency-USDT">0.102462 USDT</span>
+                                                <span class="cryptoCurrency-percent">+0.86%</span>
+                                            </div>
+                                        </a>
+                                        <a href="#" class="cryptoCurrency-link low-profit">
+                                            <div class="cryptoCurrency">
+                                                <h3 class="cryptoCurrency-title">AVAX</h3>
+                                                <span class="cryptoCurrency-USDT">9.14724 USDT</span>
+                                                <span class="cryptoCurrency-percent">+1.08%</span>
+                                            </div>
+                                        </a>
+                                        <a href="#" class="cryptoCurrency-link low-loss">
+                                            <div class="cryptoCurrency">
+                                                <h3 class="cryptoCurrency-title">XMR</h3>
+                                                <span class="cryptoCurrency-USDT">152.506 USDT</span>
+                                                <span class="cryptoCurrency-percent">-0.56%</span>
+                                            </div>
+                                        </a>
+                                        <a href="#" class="cryptoCurrency-link low-profit">
+                                            <div class="cryptoCurrency">
+                                                <h3 class="cryptoCurrency-title">OKB</h3>
+                                                <span class="cryptoCurrency-USDT">42.6536 USDT</span>
+                                                <span class="cryptoCurrency-percent">+0.48%</span>
+                                            </div>
+                                        </a>
+                                        <a href="#" class="cryptoCurrency-link low-profit">
+                                            <div class="cryptoCurrency">
+                                                <h3 class="cryptoCurrency-title">UNI</h3>
+                                                <span class="cryptoCurrency-USDT">4.02647 USDT</span>
+                                                <span class="cryptoCurrency-percent">-0.74%</span>
+                                            </div>
+                                        </a>
+                                        <a href="#" class="cryptoCurrency-link low-profit">
+                                            <div class="cryptoCurrency">
+                                                <h3 class="cryptoCurrency-title">ETC</h3>
+                                                <span class="cryptoCurrency-USDT">14.7823 USDT</span>
+                                                <span class="cryptoCurrency-percent">-0.33%</span>
+                                            </div>
+                                        </a>
+                                        <a href="#" class="cryptoCurrency-link low-loss">
+                                            <div class="cryptoCurrency">
+                                                <h3 class="cryptoCurrency-title">ATOM</h3>
+                                                <span class="cryptoCurrency-USDT">6.615129 USDT</span>
+                                                <span class="cryptoCurrency-percent">-0.09%</span>
+                                            </div>
+                                        </a>
+                                        <a href="#" class="cryptoCurrency-link low-profit">
+                                            <div class="cryptoCurrency">
+                                                <h3 class="cryptoCurrency-title">HBAR</h3>
+                                                <span class="cryptoCurrency-USDT">0.045633 USDT</span>
+                                                <span class="cryptoCurrency-percent">+0.78%</span>
+                                            </div>
+                                        </a>
+                                        <a href="#" class="cryptoCurrency-link mid-profit">
+                                            <div class="cryptoCurrency">
+                                                <h3 class="cryptoCurrency-title">FIL</h3>
+                                                <span class="cryptoCurrency-USDT">3.216023 USDT</span>
+                                                <span class="cryptoCurrency-percent">+2.16%</span>
+                                            </div>
+                                        </a>
+                                    </div>
+                                    <div class="cryptoCurrencies--col2--col2--row2--col2">
+                                        <div class="cryptoCurrencies--col2--col2--row2--col2--row1">
+                                            <div class="cryptoCurrencies--col2--col2--row2--col2--row1--col1">
+                                                <a href="#" class="cryptoCurrency-link low-loss">
+                                                    <div class="cryptoCurrency">
+                                                        <h3 class="cryptoCurrency-title">LDO</h3>
+                                                        <span class="cryptoCurrency-USDT">1,539005 USDT</span>
+                                                        <span class="cryptoCurrency-percent">+3.2%</span>
+                                                    </div>
+                                                </a>
+                                                <a href="#" class="cryptoCurrency-link low-profit">
+                                                    <div class="cryptoCurrency">
+                                                        <h3 class="cryptoCurrency-title">MKR</h3>
+                                                        <span class="cryptoCurrency-USDT">1,362.81 USDT</span>
+                                                        <span class="cryptoCurrency-percent">+0.3%</span>
+                                                    </div>
+                                                </a>
+                                                <a href="#" class="cryptoCurrency-link low-loss">
+                                                    <div class="cryptoCurrency">
+                                                        <h3 class="cryptoCurrency-title">ICP</h3>
+                                                        <span class="cryptoCurrency-USDT">2.941582 USDT</span>
+                                                        <span class="cryptoCurrency-percent">+1.6%</span>
+                                                    </div>
+                                                </a>
+                                                <a href="#" class="cryptoCurrency-link low-loss">
+                                                    <div class="cryptoCurrency">
+                                                        <h3 class="cryptoCurrency-title">CRO</h3>
+                                                        <span class="cryptoCurrency-USDT">0.050387 USDT</span>
+                                                        <span class="cryptoCurrency-percent">-1.74%</span>
+                                                    </div>
+                                                </a>
+                                                <a href="#" class="cryptoCurrency-link low-profit">
+                                                    <div class="cryptoCurrency">
+                                                        <h3 class="cryptoCurrency-title">WBETH</h3>
+                                                        <span class="cryptoCurrency-USDT">1,573.98 USDT</span>
+                                                        <span class="cryptoCurrency-percent">0.02%</span>
+                                                    </div>
+                                                </a>
+                                                <a href="#" class="cryptoCurrency-link low-profit">
+                                                    <div class="cryptoCurrency">
+                                                        <h3 class="cryptoCurrency-title">VET</h3>
+                                                        <span class="cryptoCurrency-USDT">0.016258 USDT</span>
+                                                        <span class="cryptoCurrency-percent">+0.69%</span>
+                                                    </div>
+                                                </a>
+                                            </div>
+                                            <div class="cryptoCurrencies--col2--col2--row2--col2--row1--col2">
+                                                <a href="#" class="cryptoCurrency-link low-profit">
+                                                    <div class="cryptoCurrency">
+                                                        <h3 class="cryptoCurrency-title">APT</h3>
+                                                        <span class="cryptoCurrency-USDT">4.823649 USDT</span>
+                                                        <span class="cryptoCurrency-percent">+1.32%</span>
+                                                    </div>
+                                                </a>
+                                                <a href="#" class="cryptoCurrency-link low-profit">
+                                                    <div class="cryptoCurrency">
+                                                        <h3 class="cryptoCurrency-title">OP</h3>
+                                                        <span class="cryptoCurrency-USDT">1.192346 USDT</span>
+                                                        <span class="cryptoCurrency-percent">-1.06%</span>
+                                                    </div>
+                                                </a>
+                                                <a href="#" class="cryptoCurrency-link low-profit">
+                                                    <div class="cryptoCurrency">
+                                                        <h3 class="cryptoCurrency-title">QNT</h3>
+                                                        <span class="cryptoCurrency-USDT">85.8704 USDT</span>
+                                                        <span class="cryptoCurrency-percent">0%</span>
+                                                    </div>
+                                                </a>
+                                                <a href="#" class="cryptoCurrency-link low-profit">
+                                                    <div class="cryptoCurrency">
+                                                        <h3 class="cryptoCurrency-title">ARB</h3>
+                                                        <span class="cryptoCurrency-USDT">0.803401 USDT</span>
+                                                        <span class="cryptoCurrency-percent">+0.66%</span>
+                                                    </div>
+                                                </a>
+                                                <a href="#" class="cryptoCurrency-link low-profit">
+                                                    <div class="cryptoCurrency">
+                                                        <h3 class="cryptoCurrency-title">NEAR</h3>
+                                                        <span class="cryptoCurrency-USDT">1.003126 USDT</span>
+                                                        <span class="cryptoCurrency-percent">-0.37%</span>
+                                                    </div>
+                                                </a>
+                                                <a href="#" class="cryptoCurrency-link low-profit">
+                                                    <div class="cryptoCurrency">
+                                                        <h3 class="cryptoCurrency-title">MNT</h3>
+                                                        <span class="cryptoCurrency-USDT">0.32984 USDT</span>
+                                                        <span class="cryptoCurrency-percent">-4.28%</span>
+                                                    </div>
+                                                </a>
+                                                <a href="#" class="cryptoCurrency-link low-profit">
+                                                    <div class="cryptoCurrency">
+                                                        <h3 class="cryptoCurrency-title">AAVE</h3>
+                                                        <span class="cryptoCurrency-USDT">63.3621 USDT</span>
+                                                        <span class="cryptoCurrency-percent">+1.12%</span>
+                                                    </div>
+                                                </a>
+                                            </div>
+                                        </div>
+                                        <div class="cryptoCurrencies--col2--col2--row2--col2--row2">
+                                            <div class="cryptoCurrencies--col2--col2--row2--col2--row2--col1">
+                                                <a href="#" class="cryptoCurrency-link low-loss">
+                                                    <div class="cryptoCurrency">
+                                                        <h3 class="cryptoCurrency-title">KAS</h3>
+                                                        <span class="cryptoCurrency-USDT">0.042701 USDT</span>
+                                                        <span class="cryptoCurrency-percent">-0.95%</span>
+                                                    </div>
+                                                </a>
+                                                <a href="#" class="cryptoCurrency-link low-loss">
+                                                    <div class="cryptoCurrency">
+                                                        <h3 class="cryptoCurrency-title">STX</h3>
+                                                        <span class="cryptoCurrency-USDT">0.483663 USDT</span>
+                                                        <span class="cryptoCurrency-percent">+0.41%</span>
+                                                    </div>
+                                                </a>
+                                                <a href="#" class="cryptoCurrency-link low-loss">
+                                                    <div class="cryptoCurrency">
+                                                        <h3 class="cryptoCurrency-title">ALGO</h3>
+                                                        <span class="cryptoCurrency-USDT">0.094884 USDT</span>
+                                                        <span class="cryptoCurrency-percent">-0.95%</span>
+                                                    </div>
+                                                </a>
+                                                <a href="#" class="cryptoCurrency-link mid-profit">
+                                                    <div class="cryptoCurrency">
+                                                        <h3 class="cryptoCurrency-title">GRT</h3>
+                                                        <span class="cryptoCurrency-USDT">0.07997 USDT</span>
+                                                        <span class="cryptoCurrency-percent">+0.74%</span>
+                                                    </div>
+                                                </a>
+                                                <a href="#" class="cryptoCurrency-link high-profit">
+                                                    <div class="cryptoCurrency">
+                                                        <h3 class="cryptoCurrency-title">FRAX</h3>
+                                                        <span class="cryptoCurrency-USDT">1.000331 USDT</span>
+                                                        <span class="cryptoCurrency-percent">+0.91%</span>
+                                                    </div>
+                                                </a>
+                                                <a href="#" class="cryptoCurrency-link mid-profit">
+                                                    <div class="cryptoCurrency">
+                                                        <h3 class="cryptoCurrency-title">RNDR</h3>
+                                                        <span class="cryptoCurrency-USDT">1.720228 USDT</span>
+                                                        <span class="cryptoCurrency-percent">-2.46%</span>
+                                                    </div>
+                                                </a>
+                                                <a href="#" class="cryptoCurrency-link low-loss">
+                                                    <div class="cryptoCurrency">
+                                                        <h3 class="cryptoCurrency-title">XDC</h3>
+                                                        <span class="cryptoCurrency-USDT">0.046549 USDT</span>
+                                                        <span class="cryptoCurrency-percent">+0.19%</span>
+                                                    </div>
+                                                </a>
+                                                <a href="#" class="cryptoCurrency-link low-profit">
+                                                    <div class="cryptoCurrency">
+                                                        <h3 class="cryptoCurrency-title">BSV</h3>
+                                                        <span class="cryptoCurrency-USDT">33.337 USDT</span>
+                                                        <span class="cryptoCurrency-percent">+0.4%</span>
+                                                    </div>
+                                                </a>
+                                                <a href="#" class="cryptoCurrency-link low-loss">
+                                                    <div class="cryptoCurrency">
+                                                        <h3 class="cryptoCurrency-title">XTZ</h3>
+                                                        <span class="cryptoCurrency-USDT">0.651605 USDT</span>
+                                                        <span class="cryptoCurrency-percent">+1.17%</span>
+                                                    </div>
+                                                </a>
+                                                <a href="#" class="cryptoCurrency-link high-profit">
+                                                    <div class="cryptoCurrency">
+                                                        <h3 class="cryptoCurrency-title">BGB</h3>
+                                                        <span class="cryptoCurrency-USDT">0.440449 USDT</span>
+                                                        <span class="cryptoCurrency-percent">+8.21%</span>
+                                                    </div>
+                                                </a>
+                                                <a href="#" class="cryptoCurrency-link low-profit">
+                                                    <div class="cryptoCurrency">
+                                                        <h3 class="cryptoCurrency-title">IMX</h3>
+                                                        <span class="cryptoCurrency-USDT">0.519456 USDT</span>
+                                                        <span class="cryptoCurrency-percent">-0.13%</span>
+                                                    </div>
+                                                </a>
+                                                <a href="#" class="cryptoCurrency-link low-profit">
+                                                    <div class="cryptoCurrency">
+                                                        <h3 class="cryptoCurrency-title">INJ</h3>
+                                                        <span class="cryptoCurrency-USDT">7.473813 USDT</span>
+                                                        <span class="cryptoCurrency-percent">+3.27%</span>
+                                                    </div>
+                                                </a>
+                                                <a href="#" class="cryptoCurrency-link low-loss">
+                                                    <div class="cryptoCurrency">
+                                                        <h3 class="cryptoCurrency-title">EGLD</h3>
+                                                        <span class="cryptoCurrency-USDT">23.4329 USDT</span>
+                                                        <span class="cryptoCurrency-percent">-0.27%</span>
+                                                    </div>
+                                                </a>
+                                                <a href="#" class="cryptoCurrency-link low-profit">
+                                                    <div class="cryptoCurrency">
+                                                        <h3 class="cryptoCurrency-title">EOS</h3>
+                                                        <span class="cryptoCurrency-USDT">0.540487 USDT</span>
+                                                        <span class="cryptoCurrency-percent">+1.46%</span>
+                                                    </div>
+                                                </a>
+                                            </div>
+                                            <div class="cryptoCurrencies--col2--col2--row2--col2--row2--col2">
+                                                <a href="#" class="cryptoCurrency-link low-loss">
+                                                    <div class="cryptoCurrency">
+                                                        <h3 class="cryptoCurrency-title">SAND</h3>
+                                                        <span class="cryptoCurrency-USDT">0.284662 USDT</span>
+                                                        <span class="cryptoCurrency-percent">-0.84%</span>
+                                                    </div>
+                                                </a>
+                                                <a href="#" class="cryptoCurrency-link low-profit">
+                                                    <div class="cryptoCurrency">
+                                                        <h3 class="cryptoCurrency-title">THETA</h3>
+                                                        <span class="cryptoCurrency-USDT">0.586008 USDT</span>
+                                                        <span class="cryptoCurrency-percent">+0.26%</span>
+                                                    </div>
+                                                </a>
+                                                <a href="#" class="cryptoCurrency-link high-profit">
+                                                    <div class="cryptoCurrency">
+                                                        <h3 class="cryptoCurrency-title">RUNE</h3>
+                                                        <span class="cryptoCurrency-USDT">1.6652 USDT</span>
+                                                        <span class="cryptoCurrency-percent">+11.34%</span>
+                                                    </div>
+                                                </a>
+                                                <a href="#" class="cryptoCurrency-link mid-profit">
+                                                    <div class="cryptoCurrency">
+                                                        <h3 class="cryptoCurrency-title">MANA</h3>
+                                                        <span class="cryptoCurrency-USDT">0.280859 USDT</span>
+                                                        <span class="cryptoCurrency-percent">+2.13%</span>
+                                                    </div>
+                                                </a>
+                                                <a href="#" class="cryptoCurrency-link low-loss">
+                                                    <div class="cryptoCurrency">
+                                                        <h3 class="cryptoCurrency-title">FTM</h3>
+                                                        <span class="cryptoCurrency-USDT">0.182109 USDT</span>
+                                                        <span class="cryptoCurrency-percent">-0.49%</span>
+                                                    </div>
+                                                </a>
+                                                <a href="#" class="cryptoCurrency-link no-profit-loss">
+                                                    <div class="cryptoCurrency">
+                                                        <h3 class="cryptoCurrency-title">SNX</h3>
+                                                        <span class="cryptoCurrency-USDT">1.85233 USDT</span>
+                                                        <span class="cryptoCurrency-percent">0%</span>
+                                                    </div>
+                                                </a>
+                                                <a href="#" class="cryptoCurrency-link mid-profit">
+                                                    <div class="cryptoCurrency">
+                                                        <h3 class="cryptoCurrency-title">KAVA</h3>
+                                                        <span class="cryptoCurrency-USDT">0.583332 USDT</span>
+                                                        <span class="cryptoCurrency-percent">+1.07%</span>
+                                                    </div>
+                                                </a>
+                                                <a href="#" class="cryptoCurrency-link high-loss">
+                                                    <div class="cryptoCurrency">
+                                                        <h3 class="cryptoCurrency-title">NEO</h3>
+                                                        <span class="cryptoCurrency-USDT">6.8479466 USDT</span>
+                                                        <span class="cryptoCurrency-percent">-12.09%</span>
+                                                    </div>
+                                                </a>
+                                                <a href="#" class="cryptoCurrency-link low-profit">
+                                                    <div class="cryptoCurrency">
+                                                        <h3 class="cryptoCurrency-title">PAXG</h3>
+                                                        <span class="cryptoCurrency-USDT">1,891.62 USDT</span>
+                                                        <span class="cryptoCurrency-percent">+0.67%</span>
+                                                    </div>
+                                                </a>
+                                                <a href="#" class="cryptoCurrency-link low-profit">
+                                                    <div class="cryptoCurrency">
+                                                        <h3 class="cryptoCurrency-title">XEC</h3>
+                                                        <span class="cryptoCurrency-USDT">0.000024 USDT</span>
+                                                        <span class="cryptoCurrency-percent">+0.43%</span>
+                                                    </div>
+                                                </a>
+                                                <a href="#" class="cryptoCurrency-link low-profit">
+                                                    <div class="cryptoCurrency">
+                                                        <h3 class="cryptoCurrency-title">XAUT</h3>
+                                                        <span class="cryptoCurrency-USDT">1,900.53 USDT</span>
+                                                        <span class="cryptoCurrency-percent">+0.81%</span>
+                                                    </div>
+                                                </a>
+                                                <a href="#" class="cryptoCurrency-link low-profit">
+                                                    <div class="cryptoCurrency">
+                                                        <h3 class="cryptoCurrency-title">FDUSD</h3>
+                                                        <span class="cryptoCurrency-USDT">0.999441 USDT</span>
+                                                        <span class="cryptoCurrency-percent">+0.02%</span>
+                                                    </div>
+                                                </a>
+                                                <a href="#" class="cryptoCurrency-link mid-profit">
+                                                    <div class="cryptoCurrency">
+                                                        <h3 class="cryptoCurrency-title">FLOW</h3>
+                                                        <span class="cryptoCurrency-USDT">0.420577 USDT</span>
+                                                        <span class="cryptoCurrency-percent">+1.25%</span>
+                                                    </div>
+                                                </a>
+                                                <a href="#" class="cryptoCurrency-link low-loss">
+                                                    <div class="cryptoCurrency">
+                                                        <h3 class="cryptoCurrency-title">RLB</h3>
+                                                        <span class="cryptoCurrency-USDT">0.126903 USDT</span>
+                                                        <span class="cryptoCurrency-percent">-0.42%</span>
+                                                    </div>
+                                                </a>
+                                                <a href="#" class="cryptoCurrency-link low-profit">
+                                                    <div class="cryptoCurrency">
+                                                        <h3 class="cryptoCurrency-title">KCS</h3>
+                                                        <span class="cryptoCurrency-USDT">4.39868 USDT</span>
+                                                        <span class="cryptoCurrency-percent">+0.56%</span>
+                                                    </div>
+                                                </a>
+                                                 <a href="#" class="cryptoCurrency-link low-profit">
+                                                    <div class="cryptoCurrency">
+                                                        <h3 class="cryptoCurrency-title">CHZ</h3>
+                                                        <span class="cryptoCurrency-USDT">0.055149 USDT</span>
+                                                        <span class="cryptoCurrency-percent">+1.1%</span>
+                                                    </div>
+                                                </a>
+                                                <a href="#" class="cryptoCurrency-link low-loss">
+                                                    <div class="cryptoCurrency">
+                                                        <h3 class="cryptoCurrency-title">XRD</h3>
+                                                        <span class="cryptoCurrency-USDT">0.040077 USDT</span>
+                                                        <span class="cryptoCurrency-percent">-0.28%</span>
+                                                    </div>
+                                                </a>
+                                                <a href="#" class="cryptoCurrency-link low-loss">
+                                                    <div class="cryptoCurrency">
+                                                        <h3 class="cryptoCurrency-title">ZEC</h3>
+                                                        <span class="cryptoCurrency-USDT">24.9397 USDT</span>
+                                                        <span class="cryptoCurrency-percent">-0.33%</span>
+                                                    </div>
+                                                </a>
+                                                <a href="#" class="cryptoCurrency-link high-loss">
+                                                    <div class="cryptoCurrency">
+                                                        <h3 class="cryptoCurrency-title">FXS</h3>
+                                                        <span class="cryptoCurrency-USDT">5.417217 USDT</span>
+                                                        <span class="cryptoCurrency-percent">-14.16%</span>
+                                                    </div>
+                                                </a>
+                                                <a href="#" class="cryptoCurrency-link low-profit">
+                                                    <div class="cryptoCurrency">
+                                                        <h3 class="cryptoCurrency-title">OCEAN</h3>
+                                                        <span class="cryptoCurrency-USDT">0.28605 USDT</span>
+                                                        <span class="cryptoCurrency-percent">+0.85%</span>
+                                                    </div>
+                                                </a>
+                                                <a href="#" class="cryptoCurrency-link mid-profit">
+                                                    <div class="cryptoCurrency">
+                                                        <h3 class="cryptoCurrency-title">TWT</h3>
+                                                        <span class="cryptoCurrency-USDT">0.962535 USDT</span>
+                                                        <span class="cryptoCurrency-percent">+3.46%</span>
+                                                    </div>
+                                                </a>
+                                                <a href="#" class="cryptoCurrency-link mid-profit">
+                                                    <div class="cryptoCurrency">
+                                                        <h3 class="cryptoCurrency-title">IOTA</h3>
+                                                        <span class="cryptoCurrency-USDT">0.141989 USDT</span>
+                                                        <span class="cryptoCurrency-percent">+1.17%</span>
+                                                    </div>
+                                                </a>
+                                                <a href="#" class="cryptoCurrency-link mid-profit">
+                                                    <div class="cryptoCurrency">
+                                                        <h3 class="cryptoCurrency-title">CRV</h3>
+                                                        <span class="cryptoCurrency-USDT">0.43909 USDT</span>
+                                                        <span class="cryptoCurrency-percent">+3.1%</span>
+                                                    </div>
+                                                </a>
+                                                <a href="#" class="cryptoCurrency-link mid-profit">
+                                                    <div class="cryptoCurrency">
+                                                        <h3 class="cryptoCurrency-title">KLAY</h3>
+                                                        <span class="cryptoCurrency-USDT">0.122227 USDT</span>
+                                                        <span class="cryptoCurrency-percent">+3.39%</span>
+                                                    </div>
+                                                </a>
+                                                <a href="#" class="cryptoCurrency-link low-loss">
+                                                    <div class="cryptoCurrency">
+                                                        <h3 class="cryptoCurrency-title">HT</h3>
+                                                        <span class="cryptoCurrency-USDT">2.278002 USDT</span>
+                                                        <span class="cryptoCurrency-percent">-0.24%</span>
+                                                    </div>
+                                                </a>
+                                                <a href="#" class="cryptoCurrency-link low-profit">
+                                                    <div class="cryptoCurrency">
+                                                        <h3 class="cryptoCurrency-title">APE</h3>
+                                                        <span class="cryptoCurrency-USDT">1.065587 USDT</span>
+                                                        <span class="cryptoCurrency-percent">+1.34%</span>
+                                                    </div>
+                                                </a>
+                                                <a href="#" class="cryptoCurrency-link low-profit">
+                                                    <div class="cryptoCurrency">
+                                                        <h3 class="cryptoCurrency-title">CFX</h3>
+                                                        <span class="cryptoCurrency-USDT">0.115423 USDT</span>
+                                                        <span class="cryptoCurrency-percent">+0.53%</span>
+                                                    </div>
+                                                </a>
+                                                <a href="#" class="cryptoCurrency-link low-profit">
+                                                    <div class="cryptoCurrency">
+                                                        <h3 class="cryptoCurrency-title">MINA</h3>
+                                                        <span class="cryptoCurrency-USDT">0.362497 USDT</span>
+                                                        <span class="cryptoCurrency-percent">+1.51%</span>
+                                                    </div>
+                                                </a>
+                                               <a href="#" class="cryptoCurrency-link no-profit-loss">
+                                                    <div class="cryptoCurrency">
+                                                        <h3 class="cryptoCurrency-title">RPL</h3>
+                                                        <span class="cryptoCurrency-USDT">17.9918 USDT</span>
+                                                        <span class="cryptoCurrency-percent">0%</span>
+                                                    </div>
+                                                </a>
+                                                <a href="#" class="cryptoCurrency-link low-loss">
+                                                    <div class="cryptoCurrency">
+                                                        <h3 class="cryptoCurrency-title">BTT</h3>
+                                                        <span class="cryptoCurrency-USDT">0.0000004 USDT</span>
+                                                        <span class="cryptoCurrency-percent">-0.6%</span>
+                                                    </div>
+                                                </a>
+                                                <a href="#" class="cryptoCurrency-link low-loss">
+                                                    <div class="cryptoCurrency">
+                                                        <h3 class="cryptoCurrency-title">CSPR</h3>
+                                                        <span class="cryptoCurrency-USDT">0.030528 USDT</span>
+                                                        <span class="cryptoCurrency-percent">-0.36%</span>
+                                                    </div>
+                                                </a>
+                                                <a href="#" class="cryptoCurrency-link low-loss">
+                                                    <div class="cryptoCurrency">
+                                                        <h3 class="cryptoCurrency-title">GT</h3>
+                                                        <span class="cryptoCurrency-USDT">3.6068 USDT</span>
+                                                        <span class="cryptoCurrency-percent">-0.14%</span>
+                                                    </div>
+                                                </a>
+                                                <a href="#" class="cryptoCurrency-link low-profit">
+                                                    <div class="cryptoCurrency">
+                                                        <h3 class="cryptoCurrency-title">FTT</h3>
+                                                        <span class="cryptoCurrency-USDT">1.0497 USDT</span>
+                                                        <span class="cryptoCurrency-percent">+0.77%</span>
+                                                    </div>
+                                                </a>
+                                                <a href="#" class="cryptoCurrency-link mid-profit">
+                                                    <div class="cryptoCurrency">
+                                                        <h3 class="cryptoCurrency-title">GALA</h3>
+                                                        <span class="cryptoCurrency-USDT">0.01369 USDT</span>
+                                                        <span class="cryptoCurrency-percent">+1.29%</span>
+                                                    </div>
+                                                </a>
+                                                <a href="#" class="cryptoCurrency-link low-profit">
+                                                    <div class="cryptoCurrency">
+                                                        <h3 class="cryptoCurrency-title">DYDX</h3>
+                                                        <span class="cryptoCurrency-USDT">1.846351 USDT</span>
+                                                        <span class="cryptoCurrency-percent">+0.47%</span>
+                                                    </div>
+                                                </a>
+                                                <a href="#" class="cryptoCurrency-link high-profit">
+                                                    <div class="cryptoCurrency">
+                                                        <h3 class="cryptoCurrency-title">GMX</h3>
+                                                        <span class="cryptoCurrency-USDT">0.269275 USDT</span>
+                                                        <span class="cryptoCurrency-percent">+26.2%</span>
+                                                    </div>
+                                                </a>
+                                                <a href="#" class="cryptoCurrency-link mid-profit">
+                                                    <div class="cryptoCurrency">
+                                                        <h3 class="cryptoCurrency-title">LUNC</h3>
+                                                        <span class="cryptoCurrency-USDT">0.000057 USDT</span>
+                                                        <span class="cryptoCurrency-percent">+1.86%</span>
+                                                    </div>
+                                                </a>
+                                                <a href="#" class="cryptoCurrency-link low-profit">
+                                                    <div class="cryptoCurrency">
+                                                        <h3 class="cryptoCurrency-title">COMP</h3>
+                                                        <span class="cryptoCurrency-USDT">35.5604 USDT</span>
+                                                        <span class="cryptoCurrency-percent">+0.39%</span>
+                                                    </div>
+                                                </a>
+                                                <a href="#" class="cryptoCurrency-link high-profit">
+                                                    <div class="cryptoCurrency">
+                                                        <h3 class="cryptoCurrency-title">LOOM</h3>
+                                                        <span class="cryptoCurrency-USDT">0.263156 USDT</span>
+                                                        <span class="cryptoCurrency-percent">+32.97%</span>
+                                                    </div>
+                                                </a>
+                                                <a href="#" class="cryptoCurrency-link low-loss">
+                                                    <div class="cryptoCurrency">
+                                                        <h3 class="cryptoCurrency-title">WEMIX</h3>
+                                                        <span class="cryptoCurrency-USDT">0.984139 USDT</span>
+                                                        <span class="cryptoCurrency-percent">-0.45%</span>
+                                                    </div>
+                                                </a>
+                                                <a href="#" class="cryptoCurrency-link low-loss">
+                                                    <div class="cryptoCurrency">
+                                                        <h3 class="cryptoCurrency-title">WOO</h3>
+                                                        <span class="cryptoCurrency-USDT">0.175267 USDT</span>
+                                                        <span class="cryptoCurrency-percent">-4.25%</span>
+                                                    </div>
+                                                </a>
+                                                <a href="#" class="cryptoCurrency-link low-loss">
+                                                    <div class="cryptoCurrency">
+                                                        <h3 class="cryptoCurrency-title">NFT</h3>
+                                                        <span class="cryptoCurrency-USDT">0.0000003 USDT</span>
+                                                        <span class="cryptoCurrency-percent">-1.12%</span>
+                                                    </div>
+                                                </a>
+                                                <a href="#" class="cryptoCurrency-link low-loss">
+                                                    <div class="cryptoCurrency">
+                                                        <h3 class="cryptoCurrency-title">USDJ</h3>
+                                                        <span class="cryptoCurrency-USDT">1.110763 USDT</span>
+                                                        <span class="cryptoCurrency-percent">-0.15%</span>
+                                                    </div>
+                                                </a>
+                                                <a href="#" class="cryptoCurrency-link low-profit">
+                                                    <div class="cryptoCurrency">
+                                                        <h3 class="cryptoCurrency-title">NEXO</h3>
+                                                        <span class="cryptoCurrency-USDT">0.526817 USDT</span>
+                                                        <span class="cryptoCurrency-percent">+0.56%</span>
+                                                    </div>
+                                                </a>
+                                                <a href="#" class="cryptoCurrency-link low-profit">
+                                                    <div class="cryptoCurrency">
+                                                        <h3 class="cryptoCurrency-title">DASH</h3>
+                                                        <span class="cryptoCurrency-USDT">25.3344 USDT</span>
+                                                        <span class="cryptoCurrency-percent">+0.94%</span>
+                                                    </div>
+                                                </a>
+                                                <a href="#" class="cryptoCurrency-link low-loss">
+                                                    <div class="cryptoCurrency">
+                                                        <h3 class="cryptoCurrency-title">DASH</h3>
+                                                        <span class="cryptoCurrency-USDT">25.3344 USDT</span>
+                                                        <span class="cryptoCurrency-percent">-0.94%</span>
+                                                    </div>
+                                                </a>
+                                                <a href="#" class="cryptoCurrency-link high-loss">
+                                                    <div class="cryptoCurrency">
+                                                        <h3 class="cryptoCurrency-title">DASH</h3>
+                                                        <span class="cryptoCurrency-USDT">25.3344 USDT</span>
+                                                        <span class="cryptoCurrency-percent">-9.94%</span>
+                                                    </div>
+                                                </a>
+                                            </div>
+                                        </div>  
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </main>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+            
+
+
+
+            <!-- footer -->
+             <footer class="footer d-flex flex-col gap-8 position-relative py-10 px-10 rounded-sm">
+                <section class="live-news-feed footer--section overflow-hidden d-flex flex-col rounded-xsm">
+                    <h2 class="footer--box-title fw-normal d-flex align-items-center px-10 cursor-pointer position-relative">Live news feed</h2>
+                    <div class="live-news-feed--content overflow-auto px-10">
+                        <div class="live-new py-10">
+                            <h3 class="live-new--title fw-bold">
+                                <a href="#">Can Ethereum stay above the $1650 price level</a>
+                            </h3>
+                            <div class="live-new--info d-flex gap-10">
+                                <span class="live-new--source-new">AMBCrypto</span>
+                                <span class="live-new--publication-time">21h ago</span>
+                            </div>
+                        </div>
+                        <div class="live-new py-10">
+                            <h3 class="live-new--title fw-bold">
+                                <a href="#">Can Ethereum stay above the $1650 price level</a>
+                            </h3>
+                            <div class="live-new--info d-flex gap-10">
+                                <span class="live-new--source-new">AMBCrypto</span>
+                                <span class="live-new--publication-time">21h ago</span>
+                            </div>
+                        </div>
+                        <div class="live-new py-10">
+                            <h3 class="live-new--title fw-bold">
+                                <a href="#">Can Ethereum stay above the $1650 price level</a>
+                            </h3>
+                            <div class="live-new--info d-flex gap-10">
+                                <span class="live-new--source-new">AMBCrypto</span>
+                                <span class="live-new--publication-time">21h ago</span>
+                            </div>
+                        </div>
+                        <div class="live-new py-10">
+                            <h3 class="live-new--title fw-bold">
+                                <a href="#">Can Ethereum stay above the $1650 price level</a>
+                            </h3>
+                            <div class="live-new--info d-flex gap-10">
+                                <span class="live-new--source-new">AMBCrypto</span>
+                                <span class="live-new--publication-time">21h ago</span>
+                            </div>
+                        </div>
+                        <div class="live-new py-10">
+                            <h3 class="live-new--title fw-bold">
+                                <a href="#">Can Ethereum stay above the $1650 price level</a>
+                            </h3>
+                            <div class="live-new--info d-flex gap-10">
+                                <span class="live-new--source-new">AMBCrypto</span>
+                                <span class="live-new--publication-time">21h ago</span>
+                            </div>
+                        </div>
+                        <div class="live-new py-10">
+                            <h3 class="live-new--title fw-bold">
+                                <a href="#">Can Ethereum stay above the $1650 price level</a>
+                            </h3>
+                            <div class="live-new--info d-flex gap-10">
+                                <span class="live-new--source-new">AMBCrypto</span>
+                                <span class="live-new--publication-time">21h ago</span>
+                            </div>
+                        </div>
+                        <div class="live-new py-10">
+                            <h3 class="live-new--title fw-bold">
+                                <a href="#">Can Ethereum stay above the $1650 price level</a>
+                            </h3>
+                            <div class="live-new--info d-flex gap-10">
+                                <span class="live-new--source-new">AMBCrypto</span>
+                                <span class="live-new--publication-time">21h ago</span>
+                            </div>
+                        </div>
+                        <div class="live-new py-10">
+                            <h3 class="live-new--title fw-bold">
+                                <a href="#">Can Ethereum stay above the $1650 price level</a>
+                            </h3>
+                            <div class="live-new--info d-flex gap-10">
+                                <span class="live-new--source-new">AMBCrypto</span>
+                                <span class="live-new--publication-time">21h ago</span>
+                            </div>
+                        </div>
+                        <div class="live-new py-10">
+                            <h3 class="live-new--title fw-bold">
+                                <a href="#">Can Ethereum stay above the $1650 price level</a>
+                            </h3>
+                            <div class="live-new--info d-flex gap-10">
+                                <span class="live-new--source-new">AMBCrypto</span>
+                                <span class="live-new--publication-time">21h ago</span>
+                            </div>
+                        </div>
+                        <div class="live-new py-10">
+                            <h3 class="live-new--title fw-bold">
+                                <a href="#">Can Ethereum stay above the $1650 price level</a>
+                            </h3>
+                            <div class="live-new--info d-flex gap-10">
+                                <span class="live-new--source-new">AMBCrypto</span>
+                                <span class="live-new--publication-time">21h ago</span>
+                            </div>
+                        </div>
+                        <div class="live-new py-10">
+                            <h3 class="live-new--title fw-bold">
+                                <a href="#">Can Ethereum stay above the $1650 price level</a>
+                            </h3>
+                            <div class="live-new--info d-flex gap-10">
+                                <span class="live-new--source-new">AMBCrypto</span>
+                                <span class="live-new--publication-time">21h ago</span>
+                            </div>
+                        </div>
+                        <div class="live-new py-10">
+                            <h3 class="live-new--title fw-bold">
+                                <a href="#">Can Ethereum stay above the $1650 price level</a>
+                            </h3>
+                            <div class="live-new--info d-flex gap-10">
+                                <span class="live-new--source-new">AMBCrypto</span>
+                                <span class="live-new--publication-time">21h ago</span>
+                            </div>
+                        </div>
+                        <div class="live-new py-10">
+                            <h3 class="live-new--title fw-bold">
+                                <a href="#">Can Ethereum stay above the $1650 price level</a>
+                            </h3>
+                            <div class="live-new--info d-flex gap-10">
+                                <span class="live-new--source-new">AMBCrypto</span>
+                                <span class="live-new--publication-time">21h ago</span>
+                            </div>
+                        </div>
+                        <div class="live-new py-10">
+                            <h3 class="live-new--title fw-bold">
+                                <a href="#">Can Ethereum stay above the $1650 price level</a>
+                            </h3>
+                            <div class="live-new--info d-flex gap-10">
+                                <span class="live-new--source-new">AMBCrypto</span>
+                                <span class="live-new--publication-time">21h ago</span>
+                            </div>
+                        </div>
+                        <div class="live-new py-10">
+                            <h3 class="live-new--title fw-bold">
+                                <a href="#">Can Ethereum stay above the $1650 price level</a>
+                            </h3>
+                            <div class="live-new--info d-flex gap-10">
+                                <span class="live-new--source-new">AMBCrypto</span>
+                                <span class="live-new--publication-time">21h ago</span>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <section class="statistics footer--section overflow-hidden d-flex flex-col rounded-xsm">
+                    <h2 class="footer--box-title fw-normal d-flex align-items-center px-10 cursor-pointer position-relative">Statistics</h2>
+                    <div class="statistics--content px-10">
+                        <div class="d-flex gap-10 justify-content-between">
+                            <span class="statistics--info f-grow-1 d-flex justify-content-between py-5">
+                                <span class="statistics--text">Coins</span>
+                                <span class="statistics--value">13532</span>
+                            </span>
+                            <span class="statistics--info f-grow-1 d-flex justify-content-between py-5">
+                                <span class="statistics--text">Exchange</span>
+                                <span class="statistics--value">272</span>
+                            </span>
+                        </div>
+                        <div class="statistics--info d-flex gap-10 py-5">
+                            <span class="statistics--text mr-auto">Market Cap</span>
+                            <span class="statistics--value">1,071,507,948,654 USDT</span>
+                            <span class="statistics--percent-value statistics--financial-loss">-1.01%</span>
+                        </div>
+                        <div class="statistics--info d-flex gap-10 py-5">
+                            <span class="statistics--text mr-auto">24h Vol</span>
+                            <span class="statistics--value">21,222,436,540 USDT</span>
+                            <span class="statistics--percent-value statistics--financial-benefit">51.95%</span>
+                        </div>
+                        <div class="statistics--info statistics--dominance-info d-flex gap-10 py-5">
+                            <span class="statistics--text mr-auto">Dominance</span>
+                            <span class="statistics--value">47.41% <span class="statistics--text">BTC</span></span>
+                            <span class="statistics--value">18.75% <span class="statistics--text">ETH</span></span>
+                        </div>
+                    </div>
+                </section>
+                <ul class="footer--social-networks-menu overflow-hidden d-flex gap-10">
+                    <li class="footer--social-networks-menu--item f-grow-1 rounded-sm d-flex">
+                        <a href="#" class="footer--social-networks-menu--link w-100 d-flex justify-content-center align-items-center">
+                            <img src="images/icon-mail.svg" alt="icon-mail" />
+                        </a>
+                    </li>
+                    <li class="footer--social-networks-menu--item f-grow-1 rounded-sm d-flex">
+                        <a href="#" class="footer--social-networks-menu--link w-100 d-flex justify-content-center align-items-center">
+                            <img src="images/icon-telegram.svg" alt="icon-telegram" />
+                        </a>
+                    </li>
+                    <li class="footer--social-networks-menu--item f-grow-1 rounded-sm d-flex">
+                        <a href="#" class="footer--social-networks-menu--link w-100 d-flex justify-content-center align-items-center">
+                            <img src="images/icon-twitter.svg" alt="icon-twitter" />
+                        </a>
+                    </li>
+                    <li class="footer--social-networks-menu--item f-grow-1 rounded-sm d-flex">
+                        <a href="#" class="footer--social-networks-menu--link w-100 d-flex justify-content-center align-items-center">
+                            <img src="images/icon-mastodon.svg" alt="icon-mastodon" />
+                        </a>
+                    </li>
+                    <li class="footer--social-networks-menu--item f-grow-1 rounded-sm d-flex">
+                        <a href="#" class="footer--social-networks-menu--link w-100 d-flex justify-content-center align-items-center">
+                            <img src="images/icon-linkedin.svg" alt="icon-linkedin" />
+                        </a>
+                    </li>
+                </ul>
+                <button class="footer--close-open-btn arrow-icon rounded-circle position-absolute cursor-pointer"></button>
+            </footer>
+            <!-- the link that is fixed in bottom right -->
+            <div class="fixed-link-container position-absolute">
+                <span class="close-icon"></span>
+                <a href="#" class="fixed-link  overflow-hidden position-relative">
+                    <img src="./images/RestGeos_444x136-px.gif" alt="RestGeos_444x136-px" class="fixed-link--img position-absolute"/>
+                </a>
+            </div>
+        </div>
+        <div class="resize-shareMap-btns-wrapper">
+            <button class="shareMap-btn d-none d-xl-flex justify-content-center align-items-center">
+                <img src="./images/icon-share.svg" alt="share-icon"/>
+                <span>Share Map</span>
+            </button>
+            <div class="resize-origin-content d-flex flex-col">
+                <button class="zoomIn-btn d-flex justify-content-center align-items-center">
+                    <img src="./images/plus.svg" alt="plus-icon"/>
+                </button>
+                <button class="zoomOut-btn d-flex justify-content-center align-items-center">
+                    <img src="./images/minus.svg" alt="minus-icon"/>
+                </button>
+                <button class="fullscreen-btn d-xl-none d-flex justify-content-center align-items-center ">
+                    <img src="./images/fullscreen.svg" alt="fullscreen-icon"/>
+                    <img src="./images/exit-fullscreen.svg" alt="exit-fullscreen"/>
+                </button>
+            </div>
+        </div>
+    </div>
+    <script type="module" src="js/index.js"></script>
+</body>
+
+</html>

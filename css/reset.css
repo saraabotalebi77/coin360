@@ -1,0 +1,51 @@
+*,
+*::after,
+*::before{
+    padding: 0;
+    margin: 0;
+    box-sizing : border-box;
+}
+html{
+    font-size : 62.5%;
+}
+body{
+    font-family : Roboto;
+    font-size : 1.4rem;
+    font-weight : 400;
+    color : hsla(0,0%,100%,.9);
+    background-color: var(--color-primary);
+    -webkit-user-select: none; /* Safari */
+    -ms-user-select: none; /* IE 10 and IE 11 */
+    user-select: none;
+}
+ul{
+    list-style-type :none;
+}
+a{
+    text-decoration : none;
+    color : inherit;
+}
+input,
+button{
+    border : none;
+    outline : none;
+    font-size : 1.4rem;
+    color : inherit;
+    background-color: transparent;
+}
+button{
+    cursor : pointer;
+}
+/* clears the ‘X’ from Internet Explorer */
+input[type=search]::-ms-clear { display: none; width : 0; height: 0; }
+input[type=search]::-ms-reveal { display: none; width : 0; height: 0; }
+/* clears the ‘X’ from Chrome */
+input[type="search"]::-webkit-search-decoration,
+input[type="search"]::-webkit-search-cancel-button,
+input[type="search"]::-webkit-search-results-button,
+input[type="search"]::-webkit-search-results-decoration { display: none; }
+
+
+body.fullscreen nav{
+    display: none;
+}

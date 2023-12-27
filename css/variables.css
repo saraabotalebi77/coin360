@@ -1,0 +1,44 @@
+:root{
+    --color-primary : #1d1f1e;
+    --color-green : #84c47c;
+    --color-white : #fff;
+    --bg-popup-wrapper : rgba(0,0,0,0.5);
+    --bg-btns : #313333;
+    --hover-bg-btns : #3f4141;
+    --header--bg : #2a2b2b;
+    --header--bg-search-form : #1e1e1e;
+    --header--bg-inner-menu : #2a2d2d;
+    --header--border-color-inner-menu : #3f4242;
+    --header--color-inner-menu-item : #ffffffcc;
+    --header--hover-bg-inner-menu-item : #ffffff12;
+    --header--hover-color-inner-menu-item : #84e279;
+    --header--color-stake-link : #1d1f1e;
+    --header--hover-color-stake-link : #000;
+    --header--bg-searched-results-list : #2b2b2b;
+    --header--border-color-searched-results-list-link : #5d5d5d;
+    --main--bg-menu-item : #2a2b2b;
+    --main--hover-bg-menu-item :#3c3d3db3;
+    --main--bg-inner-menu : #3c3d3d;
+    --main--bg-hide-shownCurrencies : #3c3d3d;
+    --main--bg-hide-shownCurrencies--reset-btn : #3e4141;
+    --main--bg-hide-shownCurrencies--search: hsl(180, 1%, 14%);
+    --main--bg-hide-shownCurrencies--list-selected-items: #3e4141;
+    --main--bg-selected-shownCurrencies-item : #5ea155;
+    --main--color-hide-shownCurrencies :#fff3;
+    --main--color-shownCurrencies-item--abbr-name : #ffffff80 ;
+    --footer--bg :#2a2d2d;
+    --footer--bg-box-title : #3c3e3e;
+    --footer--color-border : #383939;
+
+}
+@media only screen and (max-width:1000px){
+    :root{
+        --header--bg : #2e2d2f;
+        --header--bg-search-from : #1d1f1eb3;
+        --header--bg-responsive-menu-icon : #ffffff0d;
+        --header--color-responsive-menu-icons : #979898; 
+        --header--border-color-responsive-menu-items : rgba(255,255,255,0.1); 
+
+    }
+}
+

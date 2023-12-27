@@ -1,0 +1,73 @@
+.close-icon{
+    position : absolute;
+    width : 1.5rem;
+    height : 1.5rem;
+    top : 0;
+    right : 0;
+    z-index : 1;
+    opacity : 0.2;
+    cursor : pointer;
+}
+.close-icon:hover{
+    opacity: 0.6;
+}
+.close-icon::after,
+.close-icon::before{
+    content :"";
+    position : absolute;
+    top : 40%;
+    left : 0;
+    width : 100%;
+    height : 2px;
+    border-radius : 0.5rem;
+    background-color: currentColor;
+}
+.close-icon::after{
+    transform: rotate(-45deg);
+}
+.close-icon::before{
+    transform : rotate(45deg);
+}
+.arrow-icon::after{
+    content : "";
+    width : 0.6rem;
+    height : 0.6rem;
+    border-bottom : 2px solid var(--color-white);
+    border-right : 2px solid var(--color-white);
+    position : absolute;
+    top : 50%;
+    left : 45%;
+    transform: translate(-50%,-50%) rotate(-45deg); 
+}
+.high-profit{
+    background-color : rgba(33, 94, 44 ,0.685);
+}
+.mid-profit{
+    background-color : rgba(81, 134, 81 ,0.685);
+}
+.low-profit{
+    background-color : rgba(126, 193, 126 ,0.685);
+}
+.no-profit-loss{
+    background-color : rgba(188, 178, 177 ,0.685);
+}
+.low-loss{
+    background-color: rgba(237, 113, 113 ,0.685);
+}
+.high-loss{
+    background-color : rgba(200, 64, 64 ,0.685);
+}
+
+@media only screen and (max-width:1000px){
+    .arrow-icon-xl::after{
+        content : "";
+        width : 1rem;
+        height : 1rem;
+        border-bottom : 2px solid var(--header--color-responsive-menu-icons);
+        border-right : 2px solid var(--header--color-responsive-menu-icons);
+        position : absolute;
+        top : 50%;
+        right : 3rem;
+        transform: translateY(-50%) rotate(45deg);
+    }
+}
